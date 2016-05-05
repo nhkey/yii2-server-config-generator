@@ -49,8 +49,8 @@ echo "Generate nginx config..."
 
 declare -A app_params_front
 declare -A app_params_back
-app_params_front=([APP_URL]=$app_front_url"/frontend" [APP_PATH]=$app_path [APP_ACCESS]=$access_front_file [APP_ERROR]=$error_front_file )
-app_params_back=([APP_URL]=$app_back_url"/backend" [APP_PATH]=$app_path [APP_ACCESS]=$access_back_file [APP_ERROR]=$error_back_file )
+app_params_front=([APP_URL]=$app_front_url [APP_PATH]=$app_path"/frontend" [APP_ACCESS]=$access_front_file [APP_ERROR]=$error_front_file )
+app_params_back=([APP_URL]=$app_back_url [APP_PATH]=$app_path"/backend" [APP_ACCESS]=$access_back_file [APP_ERROR]=$error_back_file )
 
 conf_text=$(< $template);
 
